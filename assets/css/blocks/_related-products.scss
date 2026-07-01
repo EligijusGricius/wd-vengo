@@ -1,0 +1,13 @@
+.related-products {
+    margin-bottom: 124px;
+
+    @media screen {
+        @media (max-width: 991px) {
+            margin-bottom: 64px;
+        }
+    }
+
+    .block-heading {
+        text-align: left;   
+    } 
+}

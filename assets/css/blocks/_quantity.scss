@@ -1,0 +1,53 @@
+div.quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    gap: 0;
+    height: 40px;
+    width: 87px;
+    padding: 0 12px;
+    background-color: #fff;
+    border: 1px solid #E6E6E6;
+    border-radius: 35px;
+
+    input[type="number"] {
+        height: 100%;
+        width: 31px;
+        padding: 0;
+        border: 0;
+        background: #fff;
+        font-size: 16px;
+        color: #323232;
+        user-select: none;
+        text-align: center;
+        border-radius: 0;
+    }
+
+    input[type="button"],
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        height: 16px;
+        width: 16px;
+        padding: 0;
+        border: 0;
+        font-size: 0;
+        transition: all .3s ease-in-out;
+        border-radius: 0;
+
+        &.minus {
+            background: url('../images/icons/minus-icon.svg') center center no-repeat;
+        }
+
+        &.plus {
+            background: url('../images/icons/plus-icon.svg') center center no-repeat;
+        }
+
+        &:hover {
+            opacity: 0.85;
+        }
+    }
+}

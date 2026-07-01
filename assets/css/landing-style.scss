@@ -1,0 +1,20 @@
+@import "base-css";
+
+/* Sections  */
+
+@import "sections/_home-hero";
+@import "sections/_home-products";
+@import "sections/_reviews";
+
+/* Blocks */
+
+@import "blocks/_product-card";
+@import "blocks/_products-swiper";
+@import "blocks/_categories-grid";
+@import "blocks/_products-tabs";
+@import "blocks/_social-media-swiper";
+@import "blocks/_logo-swiper";
+@import "blocks/_post-item";
+@import "blocks/_cart-widget-side";
+@import "blocks/_quantity";
+@import "blocks/_story-media";

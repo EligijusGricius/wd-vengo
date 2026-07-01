@@ -1,0 +1,36 @@
+.social-media-swiper {
+    padding-bottom: 80px;
+
+    @media screen {
+        @media (max-width: 768px) {
+            padding-bottom: 60px;
+        }
+    }
+    
+    .swiper-slide {
+        a {
+            display: flex;
+            overflow: hidden;
+            border-radius: 10px;
+
+            img {
+                border-radius: 10px;
+                transition: all .3s ease-in-out;
+
+                @media screen {
+                    @media (max-width: 390px) {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            &:hover {
+                img {
+                    opacity: 0.9;
+                }
+            }
+        }
+    }
+}

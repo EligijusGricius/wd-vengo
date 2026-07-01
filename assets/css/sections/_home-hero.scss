@@ -1,0 +1,26 @@
+.home-hero {
+    margin: 0 0 80px 0;
+
+    @media screen {
+        @media (max-width: 768px) {
+            margin: 0 0 60px 0;
+        }
+    }
+
+    .swiper {
+        height: 100%;
+        border-radius: 10px;
+        
+        .swiper-pagination {
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            margin: 0;
+            transform: translateX(-50%);
+        }
+
+        .swiper-wrapper {
+            border-radius: 10px;
+        }
+    }
+}
