@@ -92,7 +92,6 @@ body {
 
     &.mini-cart-opened {
         .content-overlay {
-            right: 520px;
             opacity: 1;
             visibility: visible;
             z-index: 99999999;
@@ -539,7 +538,7 @@ input[type="checkbox"]:checked {
     border-color: transparent;
     color: transparent;
     outline: none;
-    text-transform: uppercase;
+    text-transform: none;
     transition: all .3s ease-in-out;
     box-shadow: none;
 
@@ -575,6 +574,7 @@ input[type="checkbox"]:checked {
         white-space: nowrap;
         text-decoration: none;
         text-align: center;
+        text-transform: none;
         border-radius: 35px;
     } 
 
