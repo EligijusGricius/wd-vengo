@@ -9,6 +9,9 @@
         overflow: hidden;
 
         img {
+            height: auto;
+            width: 100%;
+            object-fit: cover;
             transition: all .3s ease-in-out;
 
             @media screen {
