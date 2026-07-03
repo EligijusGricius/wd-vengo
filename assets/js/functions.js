@@ -585,4 +585,124 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
+        /* Scoped Search with "Nothing found" message */
+
+    const sidebarWidgets = document.querySelectorAll('.sidebar .widget');
+
+    sidebarWidgets.forEach(widget => {
+        const searchField = widget.querySelector('.search-filter');
+        const filterList = widget.querySelector('ul[class*="filter-list"]');
+
+        if (searchField && filterList) {
+            const listItems = filterList.querySelectorAll('li');
+
+            let noResults = widget.querySelector('.no-results-message');
+
+            if (!noResults) {
+                noResults = document.createElement('div');
+                noResults.className = 'no-results-message';
+                noResults.textContent = 'Nekas netika atrasts.'; 
+                noResults.style.display = 'none'; 
+                noResults.style.padding = '10px 0';
+                noResults.style.color = '#707070';
+                
+                filterList.parentNode.insertBefore(noResults, filterList.nextSibling);
+            }
+
+            searchField.addEventListener('input', function() {
+                const query = this.value.toLowerCase().trim();
+                let hasMatches = false;
+
+                listItems.forEach(li => {
+                    const text = li.textContent.toLowerCase();
+
+                    if (text.includes(query)) {
+                        li.style.display = ""; 
+                        hasMatches = true; 
+                    } else {
+                        li.style.display = "none";
+                    }
+                });
+
+
+                if (!hasMatches && query !== "") {
+                    noResults.style.display = "block";
+                } else {
+                    noResults.style.display = "none";
+                }
+            });
+        }
+    });
+
+    /* Widget Accordion Toggle with Animation */
+
+    const widgets = document.querySelectorAll('.sidebar .widget');
+
+    if (widgets.length > 0) {
+        widgets.forEach(widget => {
+            const title = widget.querySelector('.widget-title');
+            const content = widget.querySelector('.widget__content');
+
+            if (title && content) {
+                content.style.maxHeight = content.scrollHeight + "px";
+
+                title.addEventListener('click', () => {
+                    widget.classList.toggle('close');
+
+                    if (widget.classList.contains('close')) {
+                        content.style.maxHeight = "0px";
+                        content.style.opacity = "0";
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        content.style.opacity = "1";
+                    }
+                });
+            }
+        });
+    }
+
+    /* Widget filter list "Show more" button */
+
+    document.querySelectorAll('.wc-filter-list').forEach(list => {
+        const hasLogos = list.querySelector('.link-logo');
+        const hasSearch = list.closest('.widget__content')?.querySelector('.search-filter');
+
+        if (hasLogos || hasSearch) return;
+
+        const visibleCount = 4;
+        const batchSize = 5;
+        const items = Array.from(list.children);
+
+        if (items.length <= visibleCount) return;
+
+        items.forEach((item, index) => {
+            if (index >= visibleCount) item.hidden = true;
+        });
+
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'wc-filter-list__more';
+        list.insertAdjacentElement('afterend', button);
+
+        const updateButton = () => {
+            const hiddenItems = items.filter(item => item.hidden);
+
+            if (hiddenItems.length === 0) {
+                button.remove();
+                return;
+            }
+
+            const nextBatch = Math.min(batchSize, hiddenItems.length);
+            button.textContent = `+ Parādīt vēl ${nextBatch}`;
+        };
+
+        button.addEventListener('click', () => {
+            const hiddenItems = items.filter(item => item.hidden);
+            hiddenItems.slice(0, batchSize).forEach(item => item.hidden = false);
+            updateButton();
+        });
+
+        updateButton();
+    });
 });
