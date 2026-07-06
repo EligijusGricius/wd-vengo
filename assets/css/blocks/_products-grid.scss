@@ -10,6 +10,10 @@
                 grid-template-columns: repeat(3, minmax(0, 1fr));
             }
 
+            @media (max-width: 1199px) AND (min-width: 992px) {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
             @media (max-width: 768px) {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }

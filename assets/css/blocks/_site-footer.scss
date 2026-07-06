@@ -385,8 +385,14 @@
             &-list {
                 display: flex;
                 align-items: center;
-                gap: 0 8px;
-                flex-wrap: wrap;    
+                gap: 8px;
+                flex-wrap: wrap;  
+                
+                @media screen {
+                    @media (max-width: 910px) {
+                        justify-content: center;
+                    }
+                }
                 
                 > span {
                     margin-right: 12px;

@@ -705,4 +705,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         updateButton();
     });
+
+    /* Mobile filters toggle */
+
+    document.querySelector('.toolbar .toolbar__filter-toggle')?.addEventListener('click', () => {
+        document.body.classList.add('show-mobile-filters');
+    });
+
+    document.querySelector('.sidebar .close-sidebar')?.addEventListener('click', () => {
+        document.body.classList.remove('show-mobile-filters');
+    });
 });
