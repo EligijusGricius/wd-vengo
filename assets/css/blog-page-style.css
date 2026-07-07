@@ -10065,6 +10065,11 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@media screen and (max-width: 991px) {
+  html.show-mobile-filters .container.has-aside .sidebar, body.show-mobile-filters .container.has-aside .sidebar {
+    transform: translateX(0);
+  }
+}
 
 html {
   overflow-x: hidden;
