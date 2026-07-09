@@ -10647,63 +10647,82 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 
-.block-heading-holder, .section-heading-holder {
+.block-heading-holder,
+.section-heading-holder,
+.page-heading-holder {
   margin: 0 0 40px 0;
 }
-.block-heading-holder .block-heading, .block-heading-holder .section-heading, .block-heading-holder .page-heading, .section-heading-holder .block-heading, .section-heading-holder .section-heading, .section-heading-holder .page-heading {
-  margin: 0 0 12px 0;
+.block-heading-holder .block-heading, .block-heading-holder .section-heading, .block-heading-holder .page-heading,
+.section-heading-holder .block-heading,
+.section-heading-holder .section-heading,
+.section-heading-holder .page-heading,
+.page-heading-holder .block-heading,
+.page-heading-holder .section-heading,
+.page-heading-holder .page-heading {
+  margin: 0 0 9px 0;
 }
-.block-heading-holder .sub-heading, .section-heading-holder .sub-heading {
+.block-heading-holder .sub-heading,
+.section-heading-holder .sub-heading,
+.page-heading-holder .sub-heading {
   margin: 0;
   font-size: 18px;
   font-weight: 500;
   color: #4C4C4D;
 }
-.block-heading-holder:has(.products-tabs__nav), .block-heading-holder:has(.read-more), .section-heading-holder:has(.products-tabs__nav), .section-heading-holder:has(.read-more) {
+.block-heading-holder:has(.products-tabs__nav), .block-heading-holder:has(.read-more),
+.section-heading-holder:has(.products-tabs__nav),
+.section-heading-holder:has(.read-more),
+.page-heading-holder:has(.products-tabs__nav),
+.page-heading-holder:has(.read-more) {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0 50px;
 }
 @media screen and (max-width: 380px) {
-  .block-heading-holder:has(.products-tabs__nav), .block-heading-holder:has(.read-more), .section-heading-holder:has(.products-tabs__nav), .section-heading-holder:has(.read-more) {
+  .block-heading-holder:has(.products-tabs__nav), .block-heading-holder:has(.read-more),
+  .section-heading-holder:has(.products-tabs__nav),
+  .section-heading-holder:has(.read-more),
+  .page-heading-holder:has(.products-tabs__nav),
+  .page-heading-holder:has(.read-more) {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     gap: 12px 0;
   }
-  .block-heading-holder:has(.products-tabs__nav) .block-heading, .block-heading-holder:has(.products-tabs__nav) .section-heading, .block-heading-holder:has(.read-more) .block-heading, .block-heading-holder:has(.read-more) .section-heading, .section-heading-holder:has(.products-tabs__nav) .block-heading, .section-heading-holder:has(.products-tabs__nav) .section-heading, .section-heading-holder:has(.read-more) .block-heading, .section-heading-holder:has(.read-more) .section-heading {
+  .block-heading-holder:has(.products-tabs__nav) .block-heading, .block-heading-holder:has(.products-tabs__nav) .section-heading, .block-heading-holder:has(.read-more) .block-heading, .block-heading-holder:has(.read-more) .section-heading,
+  .section-heading-holder:has(.products-tabs__nav) .block-heading,
+  .section-heading-holder:has(.products-tabs__nav) .section-heading,
+  .section-heading-holder:has(.read-more) .block-heading,
+  .section-heading-holder:has(.read-more) .section-heading,
+  .page-heading-holder:has(.products-tabs__nav) .block-heading,
+  .page-heading-holder:has(.products-tabs__nav) .section-heading,
+  .page-heading-holder:has(.read-more) .block-heading,
+  .page-heading-holder:has(.read-more) .section-heading {
     margin: 0;
   }
 }
 @media screen and (max-width: 1199px) {
-  .block-heading-holder:has(.products-tabs__nav), .section-heading-holder:has(.products-tabs__nav) {
+  .block-heading-holder:has(.products-tabs__nav),
+  .section-heading-holder:has(.products-tabs__nav),
+  .page-heading-holder:has(.products-tabs__nav) {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     gap: 12px 0;
   }
-  .block-heading-holder:has(.products-tabs__nav) .block-heading, .block-heading-holder:has(.products-tabs__nav) .section-heading, .section-heading-holder:has(.products-tabs__nav) .block-heading, .section-heading-holder:has(.products-tabs__nav) .section-heading {
+  .block-heading-holder:has(.products-tabs__nav) .block-heading, .block-heading-holder:has(.products-tabs__nav) .section-heading,
+  .section-heading-holder:has(.products-tabs__nav) .block-heading,
+  .section-heading-holder:has(.products-tabs__nav) .section-heading,
+  .page-heading-holder:has(.products-tabs__nav) .block-heading,
+  .page-heading-holder:has(.products-tabs__nav) .section-heading {
     margin: 0;
   }
 }
-.block-heading-holder .read-more, .section-heading-holder .read-more {
+.block-heading-holder .read-more,
+.section-heading-holder .read-more,
+.page-heading-holder .read-more {
   padding: 0 32px;
-}
-
-.page-heading-holder {
-  margin: 0 0 20px 0;
-}
-.page-heading-holder h1, .page-heading-holder .h1 {
-  margin: 0 0 7px 0;
-  line-height: 44px;
-  font-size: 32px;
-}
-.page-heading-holder .sub-heading {
-  color: rgba(37, 31, 31, 0.8);
-}
-.page-heading-holder:not(:has(.sub-heading)) h1, .page-heading-holder:not(:has(.sub-heading)) .h1, .page-heading-holder:not(:has(.sub-heading)) .page-heading {
-  margin: 0;
 }
 
 input[type=number]::-webkit-outer-spin-button,

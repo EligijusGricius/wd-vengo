@@ -720,11 +720,13 @@ input[type=number]::-webkit-outer-spin-button {
     }
 }
 
-.block-heading-holder, .section-heading-holder {
+.block-heading-holder, 
+.section-heading-holder,
+.page-heading-holder {
     margin: 0 0 40px 0;
 
     .block-heading, .section-heading, .page-heading {
-        margin: 0 0 12px 0;
+        margin: 0 0 9px 0;
     }
 
     .sub-heading {
@@ -773,26 +775,6 @@ input[type=number]::-webkit-outer-spin-button {
 
     .read-more {
         padding: 0 32px;
-    }
-}
-
-.page-heading-holder {
-    margin: 0 0 20px 0;
-
-    h1 {
-        margin: 0 0 7px 0;
-        line-height: 44px;
-        font-size: 32px;
-    }
-
-    .sub-heading { 
-        color: rgba(37, 31, 31, 0.8);
-    }
-
-    &:not(:has(.sub-heading)) {
-        h1, .page-heading {
-            margin: 0;
-        }
     }
 }
 
