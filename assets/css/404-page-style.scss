@@ -1,0 +1,57 @@
+@import "base-css";
+
+/* Blocks */
+
+@import "blocks/_cart-widget-side";
+@import "blocks/_quantity";
+
+
+.page-not-found {
+    max-width: 464px;
+    margin: 0 auto;
+    color: #4C4C4D;
+
+    h1 {
+        margin-bottom: 12px;
+
+        &::before {
+            content: "404";
+            display: block;
+            margin-bottom: 7px;
+            line-height: 112px;
+            font-size: 96px;
+            color: #231347;
+        }
+    }
+
+    p {
+        margin: 0 0 20px 0;
+    }
+}
+
+html {
+    &:has(body.error404) {
+        display: flex;
+        flex-direction: column;
+
+        body {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        #main {
+            padding-bottom: 100px;
+
+            @media screen {
+                @media (max-width: 991px) {
+                    padding-bottom: 60px;
+                }
+            }
+        }
+
+        #main-footer {
+            margin-top: auto;
+        }
+    }
+}
