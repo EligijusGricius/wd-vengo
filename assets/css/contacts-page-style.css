@@ -10834,12 +10834,12 @@ input[type=number]::-webkit-inner-spin-button {
 .swiper-nav button.swiper-button-next, .swiper-nav div.swiper-button-next {
   background-image: url("../images/icons/swiper-nav-right-arrow.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 18px center;
 }
 .swiper-nav button.swiper-button-prev, .swiper-nav div.swiper-button-prev {
   background-image: url("../images/icons/swiper-nav-left-arrow.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 16px center;
 }
 .swiper-nav button.swiper-button-disabled, .swiper-nav div.swiper-button-disabled {
   background-color: transparent;
