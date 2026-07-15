@@ -5,9 +5,9 @@ if($('select').length) {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    Fancybox.bind("[data-fancybox]", {
-    // Your custom options
-    });
+    if(document.querySelector("[data-fancybox]")) {
+        Fancybox.bind("[data-fancybox]", {});
+    }
 
     /* Header on scroll */
 

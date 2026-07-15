@@ -1,0 +1,272 @@
+@import "base-css";
+
+
+.auth-page {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+
+    @media screen {
+        @media (min-width: 992px) {
+            min-height: 100vh;
+            padding: 32px;
+            background: #F6F6F6;            
+        }
+
+        @media (max-width: 991px) {
+            grid-template-columns: 1fr;
+            padding: 20px 30px 50px 30px;
+        }
+
+        @media (max-width: 768px) {
+            padding: 20px 16px 50px 16px;
+        }
+    }
+
+    &__form,
+    &__image {
+        @media screen {
+            @media (min-width: 992px) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+                border-radius: 12px;
+            }
+        }
+    }
+
+    &__form {
+        position: relative;
+        background-color: #fff;
+
+        @media screen {
+            @media (max-width: 1199px) AND (min-width: 992px) {
+                padding-top: 100px;
+                padding-bottom: 100px;
+            }
+        }
+
+        form {
+            width: 396px;
+
+            @media screen {
+                @media (max-width: 991px) {
+                    width: 100%;
+                }
+            }
+
+            &:has(input#customer-type-company:checked) {
+                .form-row--hidden {
+                    display: block;
+                }
+            }
+        }
+
+        .form-row {
+            &:has(input[type="checkbox"]) {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 0 10px;
+                margin: 0;
+
+                label {
+                    margin: 0;
+                }
+
+                a {
+                    color: #393262;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            &.form-row--hidden {
+                display: none;
+            }
+        }
+
+        .customer-type-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 20px;
+            padding: 0 0 12px 0;
+            margin: 0 0 20px 0;
+            border-bottom: 1px solid #E6E6E6;
+
+            input[type="radio"] {
+                margin-right: 5px;
+            }
+        }
+
+        .woocommerce-button {
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        .notice {
+            font-size: 14px;
+
+            a {
+                font-weight: 500;
+                color: #393262;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .btn-google {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 48px;
+            margin: 20px 0 0 0;
+            border: 1px solid #E6E6E6;
+            color: #323232;
+            border-radius: 35px;
+            transition: all 0.3s ease-in-out;
+
+            span {
+                display: flex;
+                align-items: center;
+                gap: 0 15px;
+
+                &::before {
+                    content: '';
+                    flex-shrink: 0;
+                    width: 23px;
+                    height: 23px;
+                    background: url('../images/logos/google-btn-logo.svg') center center no-repeat;
+                }
+            }
+
+            &:hover {
+                background-color: #f7f7f7;
+            }
+        }
+    }
+
+    &__image {
+        background-color: #E8F4FF;
+        user-select: none;
+        pointer-events: none;
+
+        @media screen {
+            @media (max-width: 991px) {
+                display: none;
+            }
+        }
+
+        svg, img {
+            opacity: 0.4;
+
+            @media screen {
+                @media (max-width: 1399px) {
+                    max-height: 150px;
+                }
+            }
+        }
+    }
+
+    .logo-holder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media screen {
+            @media (min-width: 992px) {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                right: 20px;
+            }
+
+            @media (max-width: 991px) {
+                margin-bottom: 20px;
+            }
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            width: 40px;
+            height: 40px;
+            background: #fff url('../images/icons/back-btn-arrow.svg') center center no-repeat;
+            border: 1px solid #E6E6E6;
+            transition: all 0.3s ease-in-out;
+            border-radius: 8px;
+
+            &:hover {
+                background-color: #f7f7f7;
+            }
+
+            &:active {
+                background-color: #f2f2f2;
+            }
+        }
+    }
+
+    .form-heading {
+        margin: 0 0 20px 0;
+        font-size: 14px;
+        text-align: center;
+
+        h1, h2 {
+            margin: 0 0 8px 0;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 44px;
+            color: #323232;
+            text-transform: uppercase;
+
+            @media screen {
+                @media (max-width: 991px) {
+                    line-height: 34px;
+                    font-size: 26px;
+                }
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+
+        a {
+            color: #393262;
+            text-decoration: none;
+            font-weight: 600;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+html {
+    &:has(.auth-page) {
+        @media screen {
+            @media (max-width: 991px) {
+                background-color: #fff;
+            }
+        }
+
+        body {
+            padding: 0;
+
+            @media screen {
+                @media (max-width: 991px) {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}

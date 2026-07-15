@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="lv">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+        <link href="assets/css/auth-page-style.css?v=1" rel="stylesheet" />
+        <title>Vengo</title>
+    </head>
+
+    <body>
+        <main id="main" class="site-main" role="main">
+            <div class="auth-page">
+                <div class="auth-page__form">
+                    <div class="logo-holder">
+                        <a href="#" class="back-btn"></a>
+                        
+                        <a href="#" class="site-logo">
+                            <img src="assets/images/logo.svg" alt="">
+                        </a>
+                    </div>
+
+                    <form class="auth-page__form__inner" action="" method="post">
+                        <div class="form-heading">
+                            <h1>REĢISTRTĒTIES</h1>
+                            <p>Jau izmantojat Vengo? <a href="login-page.html"></a>Autorizēties</a></p>
+                        </div>
+                       
+                        <div class="form-row">
+                            <label>E-pasts</label>
+                            <input type="email" name="" value="" class="input-text" placeholder="janis@example.com">
+                        </div>
+
+                        <div class="form-row">
+                            <label>Parole</label>
+
+                            <div class="password-input">
+                                <input type="password" name="password" class="input-text" placeholder="**************" required="">
+                                <button type="button" class="show-password-input" aria-label="Show password"></button>
+                            </div>
+                        </div>
+
+                        <div class="customer-type-row">
+                            <div class="customer-type-row__radio">
+                                <input type="radio" name="customer-type" value="individual" id="customer-type-individual" checked="">
+                                <label for="customer-type-individual">Fiziska persona</label>
+                            </div>
+
+                            <div class="customer-type-row__radio">
+                                <input type="radio" name="customer-type" value="company" id="customer-type-company">
+                                <label for="customer-type-company">Juridiska persona</label>
+                            </div>
+                        </div>
+
+                        <div class="form-row form-row--hidden">
+                            <label>Uzņēmuma reģistrācijas Nr.</label>
+                            <input type="text" name="" value="" class="input-text"  placeholder="Ievadi reģistrācijas numuru">
+                        </div>
+
+                        <div class="form-row form-row--hidden">
+                            <label>Uzņēmuma nosaukums</label>
+                            <input type="text" name="" value="" class="input-text"  placeholder="Vengo">
+                        </div>
+
+                        <div class="form-row form-row--hidden">
+                            <label>PVN maksātāja numurs (nav obligāts)</label>
+                            <input type="text" name="" value="" class="input-text"  placeholder="Ievadi PVN numuru">
+                        </div>
+
+                        <div class="form-row">
+                            <label>Vārds, Uzvārds</label>
+                            <input type="text" name="" value="" class="input-text"  placeholder="Jānis Vītols">
+                        </div>
+
+                        <div class="form-row">
+                            <label>Tālrunis</label>
+                            <input type="tel" name="" value="" class="input-text" placeholder="Telefona nr.">
+                        </div>
+
+                        <div class="form-row">
+                            <label>Adrese</label>
+                            <input type="text" name="" value="" class="input-text"  placeholder="Rīga, Kārļa Ulmaņa gatve 2">
+                        </div>
+
+                        <p class="notice m-0">Jūsu personas dati tiks izmantoti, lai atbalstītu jūsu pieredzi visā šajā vietnē, pārvaldītu piekļuvi jūsu kontam un citiem mērķiem, kas aprakstīti mūsu <a href="#" target="_blank">privātuma politikā</a hre>.</p>
+
+                        <button type="submit" class="woocommerce-button woocommerce-form-register__submit btn btn-primary" name="register" value="Register">Reģistrēties</button>
+
+                    </form>
+                </div>
+
+                <div class="auth-page__image">
+                    <img src="assets/images/logos/vengo-auth-large-logo.svg" alt="">
+                </div>
+            </div>
+        </main>
+
+        <!-- JS files -->
+        <script src="assets/js/jquery.min.js"></script> 
+        <script src="assets/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="assets/js/bootstrap-select.min.js"></script> 
+        <script src="assets/js/functions.js?v=1"></script>          
+    </body>
+</html>
