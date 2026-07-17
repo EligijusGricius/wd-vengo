@@ -10101,9 +10101,6 @@ body.mini-cart-opened .content-overlay {
   visibility: visible;
   z-index: 99999999;
 }
-body.woocommerce-checkout {
-  padding-top: 96px;
-}
 
 .content-overlay {
   position: fixed;
@@ -10280,6 +10277,10 @@ form .form-group:has(input:required) > label::after {
 form .form-row {
   margin-bottom: 20px;
 }
+form .form-row-wide {
+  width: 100%;
+  flex-basis: 100% !important;
+}
 form .form-row label .required {
   color: #C0080B;
 }
@@ -10293,6 +10294,7 @@ form .form-row label .required {
   color: #323232;
   font-size: 16px;
   text-transform: none;
+  text-overflow: ellipsis;
   box-shadow: none;
   transition: all 0.3s ease-in-out;
   border-radius: 35px;
@@ -10401,11 +10403,11 @@ input[type=radio]:checked {
 input[type=checkbox] {
   display: inline-flex;
   flex-shrink: 0;
-  width: 24px;
-  height: 24px;
-  margin: -1px 8px 0 0;
-  border: 1.5px solid #D1D5DB;
-  background: #fff url("../images/icons/checkbox-check-icon.svg") center center no-repeat;
+  width: 20px;
+  height: 20px;
+  margin: 0 12px 0 0;
+  border: 1px solid #6C6C6C;
+  background: #fff url(../images/icons/checkbox-check-icon.svg) center center no-repeat;
   cursor: pointer;
   vertical-align: middle;
   border-radius: 4px;
@@ -10442,8 +10444,21 @@ input[type=checkbox]:required + label::after {
 }
 
 input[type=checkbox]:checked {
-  border-color: #0067B0;
-  background-color: #005CA9;
+  border-color: #393262;
+  background-color: #393262;
+}
+
+label:has(input[type=checkbox]) {
+  display: flex;
+  align-items: center;
+  gap: 0 12px;
+  flex-wrap: wrap;
+  font-weight: 400;
+  color: #323232;
+  cursor: pointer;
+}
+label:has(input[type=checkbox]) input {
+  margin: 0;
 }
 
 .password-input {
@@ -10620,6 +10635,13 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 36px;
   font-weight: 600;
   text-transform: none;
+}
+.page-heading.fz-32, .entry-title.fz-32 {
+  line-height: 44px;
+  font-size: 32px;
+}
+.page-heading.mb-20, .entry-title.mb-20 {
+  margin-bottom: 20px;
 }
 @media screen and (max-width: 991px) {
   .page-heading, .entry-title {

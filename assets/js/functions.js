@@ -759,4 +759,5 @@ document.addEventListener("DOMContentLoaded", function () {
             item.classList.toggle('delivery-accordion__item--open');
         });
     });
+    
 });
