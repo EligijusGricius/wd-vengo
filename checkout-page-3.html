@@ -31,8 +31,8 @@
 
             <div class="main-bar">
                 <div class="container">                    
-                    <button type="button" class="menu-toggle">
-                        <i class="icon"></i>
+                    <button type="button" class="menu-toggle" aria-label="Atvērt izvēlni" aria-expanded="false" aria-controls="site-navigation">
+                        <i class="icon" aria-hidden="true"></i>
                     </button>
                     
                     <a href="#" class="site-logo">
@@ -41,17 +41,17 @@
 
                     <div class="wd-header-search">
                         <form role="search" method="get"  action="#">
-                            <input type="search" placeholder="Meklēt preces..." value="" name="">
-                            <button type="submit"></button>
+                            <input type="search" placeholder="Meklēt preces..." value="" name="" aria-label="Meklēt preces">
+                            <button type="submit" aria-label="Meklēt"></button>
                         </form>
                     </div>
                     
                     <div class="buttons">
-                        <button type="button" class="mobile-search-toggle"></button>
+                        <button type="button" class="mobile-search-toggle" aria-label="Atvērt meklēšanu" aria-expanded="false"></button>
 
                         <a href="#" class="wd-header-wishlist">
                             <img src="assets/images/icons/header-heart-icon.svg" alt="">
-                            <span class="badge">3</span>
+                            <span class="badge" aria-live="polite" aria-atomic="true">3</span>
                         </a>
 
                         <a href="#" class="wd-header-my-account">
@@ -61,14 +61,14 @@
 
                         <a href="#" class="buttons__cart">
                             <img src="assets/images/icons/header-cart-icon.svg" alt="">
-                            <span class="badge">3</span>
+                            <span class="badge" aria-live="polite" aria-atomic="true">3</span>
                             <span class="buttons__cart-price">78.23 €</span>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <nav id="site-navigation">    
+            <nav id="site-navigation" aria-label="Galvenā izvēlne">    
                 <div class="container">                    
                     <ul id="primary-menu-list">  
                         <li class="menu-item">
@@ -135,9 +135,9 @@
             </nav> 
         </header>     
 
-        <main id="main" class="site-main" role="main">
+        <main id="main" class="site-main">
             <div class="container">
-                <nav class="breadcrumb woocommerce-breadcrumb" aria-label="Breadcrumb">
+                <nav class="breadcrumb woocommerce-breadcrumb" aria-label="Navigācijas ceļš">
                     <a class="breadcrumb__link" href="#">Sākums</a>
                     <span class="breadcrumb__separator"></span>
                     <a class="breadcrumb__link" href="#">gROZS</a>
@@ -171,29 +171,29 @@
                             </div>
 
                             <div class="form-row">
-                                <label class="required_field">Vārds</label>
-                                <input type="text" name="" class="input-text" placeholder="Ievadi savu vārdu un uzvārdu">
+                                <label class="required_field" for="checkout-page-3-vards">Vārds</label>
+                                <input type="text" name="" class="input-text" placeholder="Ievadi savu vārdu un uzvārdu" id="checkout-page-3-vards">
                             </div>
 
                             <div class="form-row">
-                                <label class="required_field">Uzvārds</label>
-                                <input type="text" name="" class="input-text" placeholder="Ievadi savu uzvārdu">
+                                <label class="required_field" for="checkout-page-3-uzvards">Uzvārds</label>
+                                <input type="text" name="" class="input-text" placeholder="Ievadi savu uzvārdu" id="checkout-page-3-uzvards">
                             </div>
 
                             <div class="form-row">
-                                <label class="required_field">E-pasts</label>
-                                <input type="email" name="" value="" class="input-text" placeholder="janis.vitols@example.com">
+                                <label class="required_field" for="checkout-page-3-e-pasts">E-pasts</label>
+                                <input type="email" name="" value="" class="input-text" placeholder="janis.vitols@example.com" id="checkout-page-3-e-pasts">
                             </div>
 
                             <div class="form-row">
-                                <label class="required_field">Tālrunis</label>
-                                <input type="text" name="" value="" class="input-text" placeholder="+371 22334455">
+                                <label class="required_field" for="checkout-page-3-talrunis">Tālrunis</label>
+                                <input type="text" name="" value="" class="input-text" placeholder="+371 22334455" id="checkout-page-3-talrunis">
                             </div>
 
                             <div class="form-row">
-                                <label class="required_field">Valsts</label>
+                                <label class="required_field" for="checkout-page-3-valsts">Valsts</label>
                                 
-                                <select name="country">
+                                <select name="country" id="checkout-page-3-valsts">
                                     <option value="Latvija" selected="">Latvija</option>
                                     <option value="Lietuva">Lietuva</option>
                                     <option value="Igaunija">Igaunija</option>
@@ -201,23 +201,23 @@
                             </div>
 
                             <div class="form-row form-row--hidden">
-                                <label class="required_field">Uzņēmuma nosaukums</label>
-                                <input type="text" name="" value="" class="input-text" placeholder="Vengo">
+                                <label class="required_field" for="checkout-page-3-uznemuma-nosaukums">Uzņēmuma nosaukums</label>
+                                <input type="text" name="" value="" class="input-text" placeholder="Vengo" id="checkout-page-3-uznemuma-nosaukums">
                             </div>
 
                             <div div class="form-row form-row--hidden">
-                                <label class="required_field">Juridiskā adrese</label>
-                                <input type="text" name="" value="Salnas iela 23-45" class="input-text" placeholder="Ievadi juridisko adresi">
+                                <label class="required_field" for="checkout-page-3-juridiska-adrese">Juridiskā adrese</label>
+                                <input type="text" name="" value="Salnas iela 23-45" class="input-text" placeholder="Ievadi juridisko adresi" id="checkout-page-3-juridiska-adrese">
                             </div>
 
                             <div class="form-row form-row--hidden">
-                                <label class="required_field">Uzņēmuma reģistrācijas Nr.</label>
-                                <input type="text" name="" value="" class="input-text" placeholder="Ievadi reģistrācijas numuru">
+                                <label class="required_field" for="checkout-page-3-uznemuma-registracijas-nr">Uzņēmuma reģistrācijas Nr.</label>
+                                <input type="text" name="" value="" class="input-text" placeholder="Ievadi reģistrācijas numuru" id="checkout-page-3-uznemuma-registracijas-nr">
                             </div>
 
                             <div class="form-row form-row--hidden">
-                                <label class="required_field">PVN maksātāja numurs (nav obligāts)</label>
-                                <input type="text" name="" value="" class="input-text" placeholder="Ievadi PVN numuru">
+                                <label class="required_field" for="checkout-page-3-pvn-maksataja-numurs-nav-obligats">PVN maksātāja numurs (nav obligāts)</label>
+                                <input type="text" name="" value="" class="input-text" placeholder="Ievadi PVN numuru" id="checkout-page-3-pvn-maksataja-numurs-nav-obligats">
                             </div>
 
                             <div class="form-row create-account-row">
@@ -226,11 +226,11 @@
                             </div>
 
                             <div class="form-row password-row">
-                                <label>Parole</label>
+                                <label for="checkout-page-3-parole">Parole</label>
 
                                 <div class="password-input">
-                                    <input type="password" name="password" class="input-text" placeholder="**********************" required="">
-                                    <button type="button" class="show-password-input" aria-label="Show password"></button>
+                                    <input type="password" name="password" class="input-text" placeholder="**********************" required="" id="checkout-page-3-parole">
+                                    <button type="button" class="show-password-input" aria-label="Rādīt paroli"></button>
                                 </div>
                             </div>
                         </div>
@@ -326,9 +326,9 @@
 
                             <div class="additional-delivery-details">
                                 <div class="form-row form-row-wide">
-                                    <label>Izvēlies pakomātu</label>
+                                    <label for="checkout-page-3-izvelies-pakomatu">Izvēlies pakomātu</label>
                                     
-                                    <select name="city" placeholder="Izvēlies pilsētu">
+                                    <select name="city" placeholder="Izvēlies pilsētu" id="checkout-page-3-izvelies-pakomatu">
                                         <option value="Rīga" selected="">Rīga</option>
                                         <option value="Daugavpils">Daugavpils</option>
                                         <option value="Liepāja">Liepāja</option>
@@ -338,8 +338,8 @@
                                 </div>   
                                 
                                 <div class="form-row form-row-wide">
-                                    <label>Pasūtījuma piezīmes (nav obligāts)</label>                                    
-                                    <input type="text" name="order-notes" class="input-text" placeholder="Pasūtījuma piezīmes, papildu piegādes instrukcijas.">
+                                    <label for="checkout-page-3-pasutijuma-piezimes-nav-obligats">Pasūtījuma piezīmes (nav obligāts)</label>                                    
+                                    <input type="text" name="order-notes" class="input-text" placeholder="Pasūtījuma piezīmes, papildu piegādes instrukcijas." id="checkout-page-3-pasutijuma-piezimes-nav-obligats">
                                 </div>  
                             </div>
                         </div>
@@ -436,7 +436,7 @@
                                             <tr>
                                                 <td colspan="2">
                                                     <div class="wp-block-woocommerce-checkout-order-summary-coupon-form-block">
-                                                        <input type="text" name="" value="" class="input-text" placeholder="Kupona kods kodu">
+                                                        <input type="text" name="" value="" class="input-text" placeholder="Kupona kods kodu" aria-label="Kupona kods">
                                                         <button type="button" class="button">Izmantot</button>
                                                     </div>
                                                 </td>
@@ -759,7 +759,7 @@
                                     <div class="price-holder">
                                         <div class="quantity">
                                             <input type="button" value="-" class="minus btn" aria-label="Decrease quantity">
-                                            <input type="number" id="" class="input-text qty text" value="1" aria-label="Product quantity" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+                                            <input type="number" class="input-text qty text" value="1" aria-label="Produkta daudzums" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
                                             <input type="button" value="+" class="plus btn" aria-label="Increase quantity">
                                         </div>
 
@@ -775,7 +775,7 @@
                                     </div>                                 
                                 </div>
 
-                                <a role="button" href="#" class="remove remove_from_cart_button">×</a>
+                                <button type="button" class="remove remove_from_cart_button" aria-label="Noņemt preci">×</button>
                             </li>
 
                             <li class="woocommerce-mini-cart-item">
@@ -794,7 +794,7 @@
                                     <div class="price-holder">
                                         <div class="quantity">
                                             <input type="button" value="-" class="minus btn" aria-label="Decrease quantity">
-                                            <input type="number" id="" class="input-text qty text" value="1" aria-label="Product quantity" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+                                            <input type="number" class="input-text qty text" value="1" aria-label="Produkta daudzums" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
                                             <input type="button" value="+" class="plus btn" aria-label="Increase quantity">
                                         </div>
 
@@ -802,7 +802,7 @@
                                     </div>                                 
                                 </div>
 
-                                <a role="button" href="#" class="remove remove_from_cart_button">×</a>
+                                <button type="button" class="remove remove_from_cart_button" aria-label="Noņemt preci">×</button>
                             </li>
                         </ul>
                     </div>

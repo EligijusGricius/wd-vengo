@@ -31,8 +31,8 @@
 
             <div class="main-bar">
                 <div class="container">                    
-                    <button type="button" class="menu-toggle">
-                        <i class="icon"></i>
+                    <button type="button" class="menu-toggle" aria-label="Atvērt izvēlni" aria-expanded="false" aria-controls="site-navigation">
+                        <i class="icon" aria-hidden="true"></i>
                     </button>
                     
                     <a href="#" class="site-logo">
@@ -41,17 +41,17 @@
 
                     <div class="wd-header-search">
                         <form role="search" method="get"  action="#">
-                            <input type="search" placeholder="Meklēt preces..." value="" name="">
-                            <button type="submit"></button>
+                            <input type="search" placeholder="Meklēt preces..." value="" name="" aria-label="Meklēt preces">
+                            <button type="submit" aria-label="Meklēt"></button>
                         </form>
                     </div>
                     
                     <div class="buttons">
-                        <button type="button" class="mobile-search-toggle"></button>
+                        <button type="button" class="mobile-search-toggle" aria-label="Atvērt meklēšanu" aria-expanded="false"></button>
 
                         <a href="#" class="wd-header-wishlist">
                             <img src="assets/images/icons/header-heart-icon.svg" alt="">
-                            <span class="badge">3</span>
+                            <span class="badge" aria-live="polite" aria-atomic="true">3</span>
                         </a>
 
                         <a href="#" class="wd-header-my-account">
@@ -61,14 +61,14 @@
 
                         <a href="#" class="buttons__cart">
                             <img src="assets/images/icons/header-cart-icon.svg" alt="">
-                            <span class="badge">3</span>
+                            <span class="badge" aria-live="polite" aria-atomic="true">3</span>
                             <span class="buttons__cart-price">78.23 €</span>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <nav id="site-navigation">    
+            <nav id="site-navigation" aria-label="Galvenā izvēlne">    
                 <div class="container">                    
                     <ul id="primary-menu-list">  
                         <li class="menu-item">
@@ -135,9 +135,9 @@
             </nav> 
         </header>     
 
-        <main id="main" class="site-main" role="main">
+        <main id="main" class="site-main">
             <div class="container">
-                <nav class="breadcrumb woocommerce-breadcrumb" aria-label="Breadcrumb">
+                <nav class="breadcrumb woocommerce-breadcrumb" aria-label="Navigācijas ceļš">
                     <a class="breadcrumb__link" href="#">Sākums</a>
                     <span class="breadcrumb__separator"></span>
                     <span class="breadcrumb__current">Pārtika</span>
@@ -213,8 +213,8 @@
             </div>
 
             <div class="container has-aside">
-                <aside class="sidebar">  
-                    <button type="button" class="close-sidebar">Close</button>
+                <aside class="sidebar" id="filters-sidebar">  
+                    <button type="button" class="close-sidebar">Aizvērt</button>
 
                     <h4 class="sidebar-title">FILTRI</h4>
 
@@ -343,7 +343,7 @@
                             <h5 class="widget-title">Zīmols</h5>
 
                             <div class="widget__content">
-                                <input type="text" class="search-filter" placeholder="Meklēt zīmols">
+                                <input type="text" class="search-filter" placeholder="Meklēt zīmols" aria-label="Meklēt zīmolu">
 
                                 <ul class="wc-filter-list">
                                     <li>
@@ -505,20 +505,20 @@
                         <div class="toolbar__result-count woocommerce-result-count">Atrasti 123 produkti</div>
 
                         <div class="toolbar__controls">
-                            <button type="button" class="toolbar__filter-toggle">Rādīt filtrus</button>
+                            <button type="button" class="toolbar__filter-toggle" aria-expanded="false" aria-controls="filters-sidebar">Rādīt filtrus</button>
 
                             <div class="checkbox-toggle-holder d-flex align-items-center">
                                 <span>Produkts ir noliktavā</span>
 
                                 <label class="checkbox-toggle">
-                                    <input type="checkbox" name="checkbox-toggle" value="1">
+                                    <input type="checkbox" name="checkbox-toggle" value="1" aria-label="Produkts ir noliktavā">
                                     <span class="checkbox-toggle__slider"></span>
                                 </label>
                             </div>
 
                             <div>
                                 <form action="#" method="post">
-                                    <select class="toolbar__select" name="">
+                                    <select class="toolbar__select" name="" aria-label="Kārtot pēc">
                                         <option value="nokusējuma" selected>nokusējuma</option>
                                         <option value="nokusējuma 2" selected>nokusējuma 2</option>
                                         <option value="nokusējuma 3" selected>nokusējuma 3</option>
@@ -530,7 +530,7 @@
                                 <label class="toolbar__label" for="per-page">Radīt:</label>
 
                                 <form action="#" method="post">
-                                    <select class="toolbar__select" name="">
+                                    <select class="toolbar__select" id="per-page" name="">
                                         <option value="12" selected>12</option>
                                         <option value="24">24</option>
                                         <option value="36">36</option>
@@ -569,8 +569,7 @@
                                 <div class="wishlist-holder">
                                     <div class="yith-wcwl-add-to-wishlist">
                                         <div class="yith-wcwl-add-button">
-                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow">
-                                                <i class="yith-wcwl-icon fa fa-heart-o"></i>
+                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow" aria-label="Pievienot vēlmju sarakstam"><i class="yith-wcwl-icon fa fa-heart-o" aria-hidden="true"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -595,11 +594,11 @@
                                 <div class="add-to-cart-holder">
                                     <div class="quantity">
                                         <input type="button" value="" class="minus btn" aria-label="Decrease quantity">
-                                        <input type="number" id="" class="input-text qty text" value="1" aria-label="Product quantity" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+                                        <input type="number" class="input-text qty text" value="1" aria-label="Produkta daudzums" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
                                         <input type="button" value="" class="plus btn" aria-label="Increase quantity">
                                     </div>
 
-                                    <button type="button" class="add_to_cart_button"></button>
+                                    <button type="button" class="add_to_cart_button" aria-label="Pievienot grozam"></button>
                                 </div>
                             </div>
                         </div>
@@ -617,8 +616,7 @@
                                 <div class="wishlist-holder">
                                     <div class="yith-wcwl-add-to-wishlist">
                                         <div class="yith-wcwl-add-button">
-                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow">
-                                                <i class="yith-wcwl-icon fa fa-heart-o"></i>
+                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow" aria-label="Pievienot vēlmju sarakstam"><i class="yith-wcwl-icon fa fa-heart-o" aria-hidden="true"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -643,11 +641,11 @@
                                 <div class="add-to-cart-holder">
                                     <div class="quantity">
                                         <input type="button" value="" class="minus btn" aria-label="Decrease quantity">
-                                        <input type="number" id="" class="input-text qty text" value="1" aria-label="Product quantity" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+                                        <input type="number" class="input-text qty text" value="1" aria-label="Produkta daudzums" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
                                         <input type="button" value="" class="plus btn" aria-label="Increase quantity">
                                     </div>
 
-                                    <button type="button" class="add_to_cart_button"></button>
+                                    <button type="button" class="add_to_cart_button" aria-label="Pievienot grozam"></button>
                                 </div>
                             </div>
                         </div>
@@ -665,8 +663,7 @@
                                 <div class="wishlist-holder">
                                     <div class="yith-wcwl-add-to-wishlist">
                                         <div class="yith-wcwl-add-button">
-                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow">
-                                                <i class="yith-wcwl-icon fa fa-heart-o"></i>
+                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow" aria-label="Pievienot vēlmju sarakstam"><i class="yith-wcwl-icon fa fa-heart-o" aria-hidden="true"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -691,11 +688,11 @@
                                 <div class="add-to-cart-holder">
                                     <div class="quantity">
                                         <input type="button" value="" class="minus btn" aria-label="Decrease quantity">
-                                        <input type="number" id="" class="input-text qty text" value="1" aria-label="Product quantity" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+                                        <input type="number" class="input-text qty text" value="1" aria-label="Produkta daudzums" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
                                         <input type="button" value="" class="plus btn" aria-label="Increase quantity">
                                     </div>
 
-                                    <button type="button" class="add_to_cart_button"></button>
+                                    <button type="button" class="add_to_cart_button" aria-label="Pievienot grozam"></button>
                                 </div>
                             </div>
                         </div>
@@ -711,8 +708,7 @@
                                 <div class="wishlist-holder">
                                     <div class="yith-wcwl-add-to-wishlist">
                                         <div class="yith-wcwl-add-button">
-                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow">
-                                                <i class="yith-wcwl-icon fa fa-heart-o"></i>
+                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow" aria-label="Pievienot vēlmju sarakstam"><i class="yith-wcwl-icon fa fa-heart-o" aria-hidden="true"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -741,11 +737,11 @@
                                 <div class="add-to-cart-holder">
                                     <div class="quantity">
                                         <input type="button" value="" class="minus btn" aria-label="Decrease quantity">
-                                        <input type="number" id="" class="input-text qty text" value="1" aria-label="Product quantity" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+                                        <input type="number" class="input-text qty text" value="1" aria-label="Produkta daudzums" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
                                         <input type="button" value="" class="plus btn" aria-label="Increase quantity">
                                     </div>
 
-                                    <button type="button" class="add_to_cart_button"></button>
+                                    <button type="button" class="add_to_cart_button" aria-label="Pievienot grozam"></button>
                                 </div>
                             </div>
                         </div>
@@ -761,8 +757,7 @@
                                 <div class="wishlist-holder">
                                     <div class="yith-wcwl-add-to-wishlist">
                                         <div class="yith-wcwl-add-button">
-                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow">
-                                                <i class="yith-wcwl-icon fa fa-heart-o"></i>
+                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow" aria-label="Pievienot vēlmju sarakstam"><i class="yith-wcwl-icon fa fa-heart-o" aria-hidden="true"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -783,11 +778,11 @@
                                 <div class="add-to-cart-holder">
                                     <div class="quantity">
                                         <input type="button" value="" class="minus btn" aria-label="Decrease quantity">
-                                        <input type="number" id="" class="input-text qty text" value="1" aria-label="Product quantity" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+                                        <input type="number" class="input-text qty text" value="1" aria-label="Produkta daudzums" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
                                         <input type="button" value="" class="plus btn" aria-label="Increase quantity">
                                     </div>
 
-                                    <button type="button" class="add_to_cart_button"></button>
+                                    <button type="button" class="add_to_cart_button" aria-label="Pievienot grozam"></button>
                                 </div>
                             </div>
                         </div>
@@ -803,8 +798,7 @@
                                 <div class="wishlist-holder">
                                     <div class="yith-wcwl-add-to-wishlist">
                                         <div class="yith-wcwl-add-button">
-                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow">
-                                                <i class="yith-wcwl-icon fa fa-heart-o"></i>
+                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow" aria-label="Pievienot vēlmju sarakstam"><i class="yith-wcwl-icon fa fa-heart-o" aria-hidden="true"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -829,11 +823,11 @@
                                 <div class="add-to-cart-holder">
                                     <div class="quantity">
                                         <input type="button" value="" class="minus btn" aria-label="Decrease quantity">
-                                        <input type="number" id="" class="input-text qty text" value="1" aria-label="Product quantity" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+                                        <input type="number" class="input-text qty text" value="1" aria-label="Produkta daudzums" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
                                         <input type="button" value="" class="plus btn" aria-label="Increase quantity">
                                     </div>
 
-                                    <button type="button" class="add_to_cart_button"></button>
+                                    <button type="button" class="add_to_cart_button" aria-label="Pievienot grozam"></button>
                                 </div>
                             </div>
                         </div>   
@@ -851,8 +845,7 @@
                                 <div class="wishlist-holder">
                                     <div class="yith-wcwl-add-to-wishlist">
                                         <div class="yith-wcwl-add-button">
-                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow">
-                                                <i class="yith-wcwl-icon fa fa-heart-o"></i>
+                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow" aria-label="Pievienot vēlmju sarakstam"><i class="yith-wcwl-icon fa fa-heart-o" aria-hidden="true"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -877,11 +870,11 @@
                                 <div class="add-to-cart-holder">
                                     <div class="quantity">
                                         <input type="button" value="" class="minus btn" aria-label="Decrease quantity">
-                                        <input type="number" id="" class="input-text qty text" value="1" aria-label="Product quantity" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+                                        <input type="number" class="input-text qty text" value="1" aria-label="Produkta daudzums" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
                                         <input type="button" value="" class="plus btn" aria-label="Increase quantity">
                                     </div>
 
-                                    <button type="button" class="add_to_cart_button"></button>
+                                    <button type="button" class="add_to_cart_button" aria-label="Pievienot grozam"></button>
                                 </div>
                             </div>
                         </div>
@@ -897,8 +890,7 @@
                                 <div class="wishlist-holder">
                                     <div class="yith-wcwl-add-to-wishlist">
                                         <div class="yith-wcwl-add-button">
-                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow">
-                                                <i class="yith-wcwl-icon fa fa-heart-o"></i>
+                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow" aria-label="Pievienot vēlmju sarakstam"><i class="yith-wcwl-icon fa fa-heart-o" aria-hidden="true"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -923,11 +915,11 @@
                                 <div class="add-to-cart-holder">
                                     <div class="quantity">
                                         <input type="button" value="" class="minus btn" aria-label="Decrease quantity">
-                                        <input type="number" id="" class="input-text qty text" value="1" aria-label="Product quantity" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+                                        <input type="number" class="input-text qty text" value="1" aria-label="Produkta daudzums" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
                                         <input type="button" value="" class="plus btn" aria-label="Increase quantity">
                                     </div>
 
-                                    <button type="button" class="add_to_cart_button"></button>
+                                    <button type="button" class="add_to_cart_button" aria-label="Pievienot grozam"></button>
                                 </div>
                             </div>
                         </div>
@@ -943,8 +935,7 @@
                                 <div class="wishlist-holder">
                                     <div class="yith-wcwl-add-to-wishlist">
                                         <div class="yith-wcwl-add-button">
-                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow">
-                                                <i class="yith-wcwl-icon fa fa-heart-o"></i>
+                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow" aria-label="Pievienot vēlmju sarakstam"><i class="yith-wcwl-icon fa fa-heart-o" aria-hidden="true"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -973,11 +964,11 @@
                                 <div class="add-to-cart-holder">
                                     <div class="quantity">
                                         <input type="button" value="" class="minus btn" aria-label="Decrease quantity">
-                                        <input type="number" id="" class="input-text qty text" value="1" aria-label="Product quantity" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+                                        <input type="number" class="input-text qty text" value="1" aria-label="Produkta daudzums" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
                                         <input type="button" value="" class="plus btn" aria-label="Increase quantity">
                                     </div>
 
-                                    <button type="button" class="add_to_cart_button"></button>
+                                    <button type="button" class="add_to_cart_button" aria-label="Pievienot grozam"></button>
                                 </div>
                             </div>
                         </div>
@@ -993,8 +984,7 @@
                                 <div class="wishlist-holder">
                                     <div class="yith-wcwl-add-to-wishlist">
                                         <div class="yith-wcwl-add-button">
-                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow">
-                                                <i class="yith-wcwl-icon fa fa-heart-o"></i>
+                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow" aria-label="Pievienot vēlmju sarakstam"><i class="yith-wcwl-icon fa fa-heart-o" aria-hidden="true"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -1019,11 +1009,11 @@
                                 <div class="add-to-cart-holder">
                                     <div class="quantity">
                                         <input type="button" value="" class="minus btn" aria-label="Decrease quantity">
-                                        <input type="number" id="" class="input-text qty text" value="1" aria-label="Product quantity" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+                                        <input type="number" class="input-text qty text" value="1" aria-label="Produkta daudzums" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
                                         <input type="button" value="" class="plus btn" aria-label="Increase quantity">
                                     </div>
 
-                                    <button type="button" class="add_to_cart_button"></button>
+                                    <button type="button" class="add_to_cart_button" aria-label="Pievienot grozam"></button>
                                 </div>
                             </div>
                         </div>  
@@ -1041,8 +1031,7 @@
                                 <div class="wishlist-holder">
                                     <div class="yith-wcwl-add-to-wishlist">
                                         <div class="yith-wcwl-add-button">
-                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow">
-                                                <i class="yith-wcwl-icon fa fa-heart-o"></i>
+                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow" aria-label="Pievienot vēlmju sarakstam"><i class="yith-wcwl-icon fa fa-heart-o" aria-hidden="true"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -1067,11 +1056,11 @@
                                 <div class="add-to-cart-holder">
                                     <div class="quantity">
                                         <input type="button" value="" class="minus btn" aria-label="Decrease quantity">
-                                        <input type="number" id="" class="input-text qty text" value="1" aria-label="Product quantity" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+                                        <input type="number" class="input-text qty text" value="1" aria-label="Produkta daudzums" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
                                         <input type="button" value="" class="plus btn" aria-label="Increase quantity">
                                     </div>
 
-                                    <button type="button" class="add_to_cart_button"></button>
+                                    <button type="button" class="add_to_cart_button" aria-label="Pievienot grozam"></button>
                                 </div>
                             </div>
                         </div>
@@ -1089,8 +1078,7 @@
                                 <div class="wishlist-holder">
                                     <div class="yith-wcwl-add-to-wishlist">
                                         <div class="yith-wcwl-add-button">
-                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow">
-                                                <i class="yith-wcwl-icon fa fa-heart-o"></i>
+                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow" aria-label="Pievienot vēlmju sarakstam"><i class="yith-wcwl-icon fa fa-heart-o" aria-hidden="true"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -1115,11 +1103,11 @@
                                 <div class="add-to-cart-holder">
                                     <div class="quantity">
                                         <input type="button" value="" class="minus btn" aria-label="Decrease quantity">
-                                        <input type="number" id="" class="input-text qty text" value="1" aria-label="Product quantity" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+                                        <input type="number" class="input-text qty text" value="1" aria-label="Produkta daudzums" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
                                         <input type="button" value="" class="plus btn" aria-label="Increase quantity">
                                     </div>
 
-                                    <button type="button" class="add_to_cart_button"></button>
+                                    <button type="button" class="add_to_cart_button" aria-label="Pievienot grozam"></button>
                                 </div>
                             </div>
                         </div>
@@ -1137,8 +1125,7 @@
                                 <div class="wishlist-holder">
                                     <div class="yith-wcwl-add-to-wishlist">
                                         <div class="yith-wcwl-add-button">
-                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow">
-                                                <i class="yith-wcwl-icon fa fa-heart-o"></i>
+                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow" aria-label="Pievienot vēlmju sarakstam"><i class="yith-wcwl-icon fa fa-heart-o" aria-hidden="true"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -1163,11 +1150,11 @@
                                 <div class="add-to-cart-holder">
                                     <div class="quantity">
                                         <input type="button" value="" class="minus btn" aria-label="Decrease quantity">
-                                        <input type="number" id="" class="input-text qty text" value="1" aria-label="Product quantity" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+                                        <input type="number" class="input-text qty text" value="1" aria-label="Produkta daudzums" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
                                         <input type="button" value="" class="plus btn" aria-label="Increase quantity">
                                     </div>
 
-                                    <button type="button" class="add_to_cart_button"></button>
+                                    <button type="button" class="add_to_cart_button" aria-label="Pievienot grozam"></button>
                                 </div>
                             </div>
                         </div>
@@ -1185,8 +1172,7 @@
                                 <div class="wishlist-holder">
                                     <div class="yith-wcwl-add-to-wishlist">
                                         <div class="yith-wcwl-add-button">
-                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow">
-                                                <i class="yith-wcwl-icon fa fa-heart-o"></i>
+                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow" aria-label="Pievienot vēlmju sarakstam"><i class="yith-wcwl-icon fa fa-heart-o" aria-hidden="true"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -1211,11 +1197,11 @@
                                 <div class="add-to-cart-holder">
                                     <div class="quantity">
                                         <input type="button" value="" class="minus btn" aria-label="Decrease quantity">
-                                        <input type="number" id="" class="input-text qty text" value="1" aria-label="Product quantity" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+                                        <input type="number" class="input-text qty text" value="1" aria-label="Produkta daudzums" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
                                         <input type="button" value="" class="plus btn" aria-label="Increase quantity">
                                     </div>
 
-                                    <button type="button" class="add_to_cart_button"></button>
+                                    <button type="button" class="add_to_cart_button" aria-label="Pievienot grozam"></button>
                                 </div>
                             </div>
                         </div>
@@ -1233,8 +1219,7 @@
                                 <div class="wishlist-holder">
                                     <div class="yith-wcwl-add-to-wishlist">
                                         <div class="yith-wcwl-add-button">
-                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow">
-                                                <i class="yith-wcwl-icon fa fa-heart-o"></i>
+                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow" aria-label="Pievienot vēlmju sarakstam"><i class="yith-wcwl-icon fa fa-heart-o" aria-hidden="true"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -1259,11 +1244,11 @@
                                 <div class="add-to-cart-holder">
                                     <div class="quantity">
                                         <input type="button" value="" class="minus btn" aria-label="Decrease quantity">
-                                        <input type="number" id="" class="input-text qty text" value="1" aria-label="Product quantity" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+                                        <input type="number" class="input-text qty text" value="1" aria-label="Produkta daudzums" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
                                         <input type="button" value="" class="plus btn" aria-label="Increase quantity">
                                     </div>
 
-                                    <button type="button" class="add_to_cart_button"></button>
+                                    <button type="button" class="add_to_cart_button" aria-label="Pievienot grozam"></button>
                                 </div>
                             </div>
                         </div>
@@ -1279,8 +1264,7 @@
                                 <div class="wishlist-holder">
                                     <div class="yith-wcwl-add-to-wishlist">
                                         <div class="yith-wcwl-add-button">
-                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow">
-                                                <i class="yith-wcwl-icon fa fa-heart-o"></i>
+                                            <a href="#" class="add_to_wishlist" data-product-id="" data-product-type="simple" rel="nofollow" aria-label="Pievienot vēlmju sarakstam"><i class="yith-wcwl-icon fa fa-heart-o" aria-hidden="true"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -1309,17 +1293,17 @@
                                 <div class="add-to-cart-holder">
                                     <div class="quantity">
                                         <input type="button" value="" class="minus btn" aria-label="Decrease quantity">
-                                        <input type="number" id="" class="input-text qty text" value="1" aria-label="Product quantity" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+                                        <input type="number" class="input-text qty text" value="1" aria-label="Produkta daudzums" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
                                         <input type="button" value="" class="plus btn" aria-label="Increase quantity">
                                     </div>
 
-                                    <button type="button" class="add_to_cart_button"></button>
+                                    <button type="button" class="add_to_cart_button" aria-label="Pievienot grozam"></button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <nav class="navigation pagination" aria-label="Posts">
+                    <nav class="navigation pagination" aria-label="Lapošana">
                         <div class="nav-links">
                             <a class="prev page-numbers" href="#">Previous</a>
                             <span aria-current="page" class="page-numbers current">1</span>
@@ -1630,7 +1614,7 @@
                                     <div class="price-holder">
                                         <div class="quantity">
                                             <input type="button" value="-" class="minus btn" aria-label="Decrease quantity">
-                                            <input type="number" id="" class="input-text qty text" value="1" aria-label="Product quantity" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+                                            <input type="number" class="input-text qty text" value="1" aria-label="Produkta daudzums" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
                                             <input type="button" value="+" class="plus btn" aria-label="Increase quantity">
                                         </div>
 
@@ -1646,7 +1630,7 @@
                                     </div>                                 
                                 </div>
 
-                                <a role="button" href="#" class="remove remove_from_cart_button">×</a>
+                                <button type="button" class="remove remove_from_cart_button" aria-label="Noņemt preci">×</button>
                             </li>
 
                             <li class="woocommerce-mini-cart-item">
@@ -1665,7 +1649,7 @@
                                     <div class="price-holder">
                                         <div class="quantity">
                                             <input type="button" value="-" class="minus btn" aria-label="Decrease quantity">
-                                            <input type="number" id="" class="input-text qty text" value="1" aria-label="Product quantity" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+                                            <input type="number" class="input-text qty text" value="1" aria-label="Produkta daudzums" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
                                             <input type="button" value="+" class="plus btn" aria-label="Increase quantity">
                                         </div>
 
@@ -1673,7 +1657,7 @@
                                     </div>                                 
                                 </div>
 
-                                <a role="button" href="#" class="remove remove_from_cart_button">×</a>
+                                <button type="button" class="remove remove_from_cart_button" aria-label="Noņemt preci">×</button>
                             </li>
                         </ul>
                     </div>

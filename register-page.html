@@ -8,11 +8,11 @@
     </head>
 
     <body>
-        <main id="main" class="site-main" role="main">
+        <main id="main" class="site-main">
             <div class="auth-page">
                 <div class="auth-page__form">
                     <div class="logo-holder">
-                        <a href="#" class="back-btn"></a>
+                        <a href="#" class="back-btn" aria-label="Atpakaļ"></a>
                         
                         <a href="#" class="site-logo">
                             <img src="assets/images/logo.svg" alt="">
@@ -22,20 +22,20 @@
                     <form class="auth-page__form__inner" action="" method="post">
                         <div class="form-heading">
                             <h1>REĢISTRTĒTIES</h1>
-                            <p>Jau izmantojat Vengo? <a href="login-page.html"></a>Autorizēties</a></p>
+                            <p>Jau izmantojat Vengo? <a href="login-page.html">Autorizēties</a></p>
                         </div>
                        
                         <div class="form-row">
-                            <label>E-pasts</label>
-                            <input type="email" name="" value="" class="input-text" placeholder="janis@example.com">
+                            <label for="register-page-e-pasts">E-pasts</label>
+                            <input type="email" name="" value="" class="input-text" placeholder="janis@example.com" id="register-page-e-pasts">
                         </div>
 
                         <div class="form-row">
-                            <label>Parole</label>
+                            <label for="register-page-parole">Parole</label>
 
                             <div class="password-input">
-                                <input type="password" name="password" class="input-text" placeholder="**************" required="">
-                                <button type="button" class="show-password-input" aria-label="Show password"></button>
+                                <input type="password" name="password" class="input-text" placeholder="**************" required="" id="register-page-parole">
+                                <button type="button" class="show-password-input" aria-label="Rādīt paroli"></button>
                             </div>
                         </div>
 
@@ -52,33 +52,33 @@
                         </div>
 
                         <div class="form-row form-row--hidden">
-                            <label>Uzņēmuma reģistrācijas Nr.</label>
-                            <input type="text" name="" value="" class="input-text"  placeholder="Ievadi reģistrācijas numuru">
+                            <label for="register-page-uznemuma-registracijas-nr">Uzņēmuma reģistrācijas Nr.</label>
+                            <input type="text" name="" value="" class="input-text"  placeholder="Ievadi reģistrācijas numuru" id="register-page-uznemuma-registracijas-nr">
                         </div>
 
                         <div class="form-row form-row--hidden">
-                            <label>Uzņēmuma nosaukums</label>
-                            <input type="text" name="" value="" class="input-text"  placeholder="Vengo">
+                            <label for="register-page-uznemuma-nosaukums">Uzņēmuma nosaukums</label>
+                            <input type="text" name="" value="" class="input-text"  placeholder="Vengo" id="register-page-uznemuma-nosaukums">
                         </div>
 
                         <div class="form-row form-row--hidden">
-                            <label>PVN maksātāja numurs (nav obligāts)</label>
-                            <input type="text" name="" value="" class="input-text"  placeholder="Ievadi PVN numuru">
+                            <label for="register-page-pvn-maksataja-numurs-nav-obligats">PVN maksātāja numurs (nav obligāts)</label>
+                            <input type="text" name="" value="" class="input-text"  placeholder="Ievadi PVN numuru" id="register-page-pvn-maksataja-numurs-nav-obligats">
                         </div>
 
                         <div class="form-row">
-                            <label>Vārds, Uzvārds</label>
-                            <input type="text" name="" value="" class="input-text"  placeholder="Jānis Vītols">
+                            <label for="register-page-vards-uzvards">Vārds, Uzvārds</label>
+                            <input type="text" name="" value="" class="input-text"  placeholder="Jānis Vītols" id="register-page-vards-uzvards">
                         </div>
 
                         <div class="form-row">
-                            <label>Tālrunis</label>
-                            <input type="tel" name="" value="" class="input-text" placeholder="Telefona nr.">
+                            <label for="register-page-talrunis">Tālrunis</label>
+                            <input type="tel" name="" value="" class="input-text" placeholder="Telefona nr." id="register-page-talrunis">
                         </div>
 
                         <div class="form-row">
-                            <label>Adrese</label>
-                            <input type="text" name="" value="" class="input-text"  placeholder="Rīga, Kārļa Ulmaņa gatve 2">
+                            <label for="register-page-adrese">Adrese</label>
+                            <input type="text" name="" value="" class="input-text"  placeholder="Rīga, Kārļa Ulmaņa gatve 2" id="register-page-adrese">
                         </div>
 
                         <p class="notice m-0">Jūsu personas dati tiks izmantoti, lai atbalstītu jūsu pieredzi visā šajā vietnē, pārvaldītu piekļuvi jūsu kontam un citiem mērķiem, kas aprakstīti mūsu <a href="#" target="_blank">privātuma politikā</a hre>.</p>

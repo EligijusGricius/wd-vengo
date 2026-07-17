@@ -8,11 +8,11 @@
     </head>
 
     <body>
-        <main id="main" class="site-main" role="main">
+        <main id="main" class="site-main">
             <div class="auth-page">
                 <div class="auth-page__form">
                     <div class="logo-holder">
-                        <a href="#" class="back-btn"></a>
+                        <a href="#" class="back-btn" aria-label="Atpakaļ"></a>
                         
                         <a href="#" class="site-logo">
                             <img src="assets/images/logo.svg" alt="">
@@ -26,16 +26,16 @@
                         </div>
                        
                         <div class="form-row">
-                            <label>E-pasts</label>
-                            <input type="email" name="" value="" class="input-text" placeholder="janis@example.com">
+                            <label for="login-page-e-pasts">E-pasts</label>
+                            <input type="email" name="" value="" class="input-text" placeholder="janis@example.com" id="login-page-e-pasts">
                         </div>
 
                         <div class="form-row">
-                            <label>Parole</label>
+                            <label for="login-page-parole">Parole</label>
 
                             <div class="password-input">
-                                <input type="password" name="password" class="input-text" placeholder="**************" required="">
-                                <button type="button" class="show-password-input" aria-label="Show password"></button>
+                                <input type="password" name="password" class="input-text" placeholder="**************" required="" id="login-page-parole">
+                                <button type="button" class="show-password-input" aria-label="Rādīt paroli"></button>
                             </div>
                         </div>
 

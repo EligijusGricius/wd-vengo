@@ -31,8 +31,8 @@
 
             <div class="main-bar">
                 <div class="container">                    
-                    <button type="button" class="menu-toggle">
-                        <i class="icon"></i>
+                    <button type="button" class="menu-toggle" aria-label="Atvērt izvēlni" aria-expanded="false" aria-controls="site-navigation">
+                        <i class="icon" aria-hidden="true"></i>
                     </button>
                     
                     <a href="#" class="site-logo">
@@ -41,17 +41,17 @@
 
                     <div class="wd-header-search">
                         <form role="search" method="get"  action="#">
-                            <input type="search" placeholder="Meklēt preces..." value="" name="">
-                            <button type="submit"></button>
+                            <input type="search" placeholder="Meklēt preces..." value="" name="" aria-label="Meklēt preces">
+                            <button type="submit" aria-label="Meklēt"></button>
                         </form>
                     </div>
                     
                     <div class="buttons">
-                        <button type="button" class="mobile-search-toggle"></button>
+                        <button type="button" class="mobile-search-toggle" aria-label="Atvērt meklēšanu" aria-expanded="false"></button>
 
                         <a href="#" class="wd-header-wishlist">
                             <img src="assets/images/icons/header-heart-icon.svg" alt="">
-                            <span class="badge">3</span>
+                            <span class="badge" aria-live="polite" aria-atomic="true">3</span>
                         </a>
 
                         <a href="#" class="wd-header-my-account">
@@ -61,14 +61,14 @@
 
                         <a href="#" class="buttons__cart">
                             <img src="assets/images/icons/header-cart-icon.svg" alt="">
-                            <span class="badge">3</span>
+                            <span class="badge" aria-live="polite" aria-atomic="true">3</span>
                             <span class="buttons__cart-price">78.23 €</span>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <nav id="site-navigation">    
+            <nav id="site-navigation" aria-label="Galvenā izvēlne">    
                 <div class="container">                    
                     <ul id="primary-menu-list">  
                         <li class="menu-item">
@@ -135,9 +135,9 @@
             </nav> 
         </header>     
 
-        <main id="main" class="site-main" role="main">
+        <main id="main" class="site-main">
             <div class="container">
-                <nav class="breadcrumb woocommerce-breadcrumb" aria-label="Breadcrumb">
+                <nav class="breadcrumb woocommerce-breadcrumb" aria-label="Navigācijas ceļš">
                     <a class="breadcrumb__link" href="#">Sākums</a>
                     <span class="breadcrumb__separator"></span>
                     <span class="breadcrumb__current">Vēlmju saraksts</span>
@@ -148,8 +148,8 @@
                 <div class="wishlist-grid columns-5">
                     <div class="wishlist-grid__item">
                         <div class="wishlist-product-actions">
-                            <a href="#" class="wishlist-remove" data-product-id="">Noņemt</a>
-                            <input type="checkbox" name="" class="wishlist-checkbox" data-product-id="">
+                            <a href="#" class="wishlist-remove" data-product-id="" aria-label="Noņemt no vēlmju saraksta">Noņemt</a>
+                            <input type="checkbox" name="" class="wishlist-checkbox" data-product-id="" aria-label="Atlasīt preci">
                         </div>
 
                         <div class="product-card">
@@ -177,11 +177,11 @@
                                 <div class="add-to-cart-holder">
                                     <div class="quantity">
                                         <input type="button" value="" class="minus btn" aria-label="Decrease quantity">
-                                        <input type="number" id="" class="input-text qty text" value="1" aria-label="Product quantity" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+                                        <input type="number" class="input-text qty text" value="1" aria-label="Produkta daudzums" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
                                         <input type="button" value="" class="plus btn" aria-label="Increase quantity">
                                     </div>
 
-                                    <button type="button" class="add_to_cart_button"></button>
+                                    <button type="button" class="add_to_cart_button" aria-label="Pievienot grozam"></button>
                                 </div>
                             </div>
                         </div>
@@ -189,8 +189,8 @@
                 
                     <div class="wishlist-grid__item">
                         <div class="wishlist-product-actions">
-                            <a href="#" class="wishlist-remove" data-product-id="">Noņemt</a>
-                            <input type="checkbox" name="" class="wishlist-checkbox" data-product-id="">
+                            <a href="#" class="wishlist-remove" data-product-id="" aria-label="Noņemt no vēlmju saraksta">Noņemt</a>
+                            <input type="checkbox" name="" class="wishlist-checkbox" data-product-id="" aria-label="Atlasīt preci">
                         </div>
 
                         <div class="product-card">
@@ -222,11 +222,11 @@
                                 <div class="add-to-cart-holder">
                                     <div class="quantity">
                                         <input type="button" value="" class="minus btn" aria-label="Decrease quantity">
-                                        <input type="number" id="" class="input-text qty text" value="1" aria-label="Product quantity" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+                                        <input type="number" class="input-text qty text" value="1" aria-label="Produkta daudzums" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
                                         <input type="button" value="" class="plus btn" aria-label="Increase quantity">
                                     </div>
 
-                                    <button type="button" class="add_to_cart_button"></button>
+                                    <button type="button" class="add_to_cart_button" aria-label="Pievienot grozam"></button>
                                 </div>
                             </div>
                         </div>
@@ -234,8 +234,8 @@
                 
                     <div class="wishlist-grid__item">
                         <div class="wishlist-product-actions">
-                            <a href="#" class="wishlist-remove" data-product-id="">Noņemt</a>
-                            <input type="checkbox" name="" class="wishlist-checkbox" data-product-id="">
+                            <a href="#" class="wishlist-remove" data-product-id="" aria-label="Noņemt no vēlmju saraksta">Noņemt</a>
+                            <input type="checkbox" name="" class="wishlist-checkbox" data-product-id="" aria-label="Atlasīt preci">
                         </div>
 
                         <div class="product-card">
@@ -267,11 +267,11 @@
                                 <div class="add-to-cart-holder">
                                     <div class="quantity">
                                         <input type="button" value="" class="minus btn" aria-label="Decrease quantity">
-                                        <input type="number" id="" class="input-text qty text" value="1" aria-label="Product quantity" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+                                        <input type="number" class="input-text qty text" value="1" aria-label="Produkta daudzums" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
                                         <input type="button" value="" class="plus btn" aria-label="Increase quantity">
                                     </div>
 
-                                    <button type="button" class="add_to_cart_button"></button>
+                                    <button type="button" class="add_to_cart_button" aria-label="Pievienot grozam"></button>
                                 </div>
                             </div>
                         </div>
@@ -279,8 +279,8 @@
                 
                     <div class="wishlist-grid__item">
                         <div class="wishlist-product-actions">
-                            <a href="#" class="wishlist-remove" data-product-id="">Noņemt</a>
-                            <input type="checkbox" name="" class="wishlist-checkbox" data-product-id="">
+                            <a href="#" class="wishlist-remove" data-product-id="" aria-label="Noņemt no vēlmju saraksta">Noņemt</a>
+                            <input type="checkbox" name="" class="wishlist-checkbox" data-product-id="" aria-label="Atlasīt preci">
                         </div>
 
                         <div class="product-card">
@@ -310,11 +310,11 @@
                                 <div class="add-to-cart-holder">
                                     <div class="quantity">
                                         <input type="button" value="" class="minus btn" aria-label="Decrease quantity">
-                                        <input type="number" id="" class="input-text qty text" value="1" aria-label="Product quantity" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+                                        <input type="number" class="input-text qty text" value="1" aria-label="Produkta daudzums" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
                                         <input type="button" value="" class="plus btn" aria-label="Increase quantity">
                                     </div>
 
-                                    <button type="button" class="add_to_cart_button"></button>
+                                    <button type="button" class="add_to_cart_button" aria-label="Pievienot grozam"></button>
                                 </div>
                             </div>
                         </div>
@@ -620,7 +620,7 @@
                                     <div class="price-holder">
                                         <div class="quantity">
                                             <input type="button" value="-" class="minus btn" aria-label="Decrease quantity">
-                                            <input type="number" id="" class="input-text qty text" value="1" aria-label="Product quantity" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+                                            <input type="number" class="input-text qty text" value="1" aria-label="Produkta daudzums" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
                                             <input type="button" value="+" class="plus btn" aria-label="Increase quantity">
                                         </div>
 
@@ -636,7 +636,7 @@
                                     </div>                                 
                                 </div>
 
-                                <a role="button" href="#" class="remove remove_from_cart_button">×</a>
+                                <button type="button" class="remove remove_from_cart_button" aria-label="Noņemt preci">×</button>
                             </li>
 
                             <li class="woocommerce-mini-cart-item">
@@ -655,7 +655,7 @@
                                     <div class="price-holder">
                                         <div class="quantity">
                                             <input type="button" value="-" class="minus btn" aria-label="Decrease quantity">
-                                            <input type="number" id="" class="input-text qty text" value="1" aria-label="Product quantity" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+                                            <input type="number" class="input-text qty text" value="1" aria-label="Produkta daudzums" min="1" name="quantity" step="1" placeholder="" inputmode="numeric" autocomplete="off">
                                             <input type="button" value="+" class="plus btn" aria-label="Increase quantity">
                                         </div>
 
@@ -663,7 +663,7 @@
                                     </div>                                 
                                 </div>
 
-                                <a role="button" href="#" class="remove remove_from_cart_button">×</a>
+                                <button type="button" class="remove remove_from_cart_button" aria-label="Noņemt preci">×</button>
                             </li>
                         </ul>
                     </div>
